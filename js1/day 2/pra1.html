@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>addition of 2 numbers</h1>
+    <p id="demo"></p>
+</body>
+<script>
+    // let a = parseFloat(prompt("enter a number"));
+    // let b = parseFloat(prompt("enter another number"));
+    // let c = a + b;
+    // // document.getElementById('demo').innerHTML=c;
+    // console.log("addition is " ,c)
+
+    // const x= parseInt(prompt("wnter a num"));
+    // const y=parseInt(prompt("wnter a num"));
+    // let z=x + y;
+    // document.getElementById('demo').innerHTML=z
+
+    // parse int wont consider float ,thts parse float 
+    //What will be printed in the console.
+
+var input = 7;
+
+var output1 = ++input + ++input + ++input; 
+
+var output2 = input++ + input++ + input++;
+
+var output3 = input++ + ++input + input++;
+
+console.log(output1 + ' ' + output2 + ' ' + output3);
+
+// var output1 = ++input + ++input + ++input; - In this line, the ++ operator is used as a pre-increment operator. It increments the value of input by 1 before using it in the expression. So, input becomes 8 for the first ++input, 9 for the second ++input, and 10 for the third ++input. The expression then evaluates to 8 + 9 + 10, resulting in 27.
+
+// var output2 = input++ + input++ + input++; - In this line, the ++ operator is used as a post-increment operator. It increments the value of input by 1 after using it in the expression. The initial value of input is 10 from the previous line. So, the first input++ uses 10 and increments it to 11, the second input++ uses 11 and increments it to 12, and the third input++ uses 12 and increments it to 13. The expression then evaluates to 10 + 11 + 12, resulting in 33.
+
+// var output3 = input++ + ++input + input++; - Similar to the previous line, the ++ operator is used as a post-increment and pre-increment operators. The initial value of input is 13 from the previous line. So, the first input++ uses 13 and increments it to 14, the ++input increments 14 to 15 and uses it, and the last input++ uses 15 and increments it to 16. The expression then evaluates to 13 + 15 + 15, resulting in 43.
+
+// let p= parseInt(prompt("enter a number"));
+// if (p%2==0){
+//     alert("even");}
+// else{
+//     alert("odd")
+// }
+
+// let x,y,z;
+// x=10;y=20;z=30;
+// if (x>y || x>z){
+//     alert("x greater");
+// }
+// else{
+    
+// }
+
+function findMaximum(num1, num2, num3) {
+  return Math.max(num1, num2, num3);
+}
+
+// Example usage:
+var num1 = 10;
+var num2 = 5;
+var num3 = 8;
+var maximum = findMaximum(num1, num2, num3);
+console.log("The maximum number is: " + maximum);
+
+
+
+</script>
+</html>

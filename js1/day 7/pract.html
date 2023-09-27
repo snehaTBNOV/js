@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- syncronous and asynch
+        syb-In synchronous programming, tasks are executed one after the other, and each task must wait for the previous one to complete before it can start. This means that the program will block and wait for a task to finish before moving on to the next one.
+        asy:Asynchronous operations are often used for tasks that may take some time, such as fetching data from an API or reading a file.
+        single threaded and multi thread 
+js is sync single ..it execute one at a time in a specific order 
+
+if there is only one func , one exec cont will be created.each exec cont has 2 phases
+memory initialisationa nd exec.even if you didnt execute/run the process soe memory will be aloocated .
+
+
+
+
+call stack:
+is is a stack of fn based on the order of fun called.if a func is called it is added to the top of stack. when it finishes it execution it will be removed from the top 
+function func1() {
+  console.log("Function 1");
+}
+
+function func2() {
+  console.log("Function 2");
+  func1();
+}
+
+function func3() {
+  console.log("Function 3");
+  func2();
+}
+
+func3();
+
+
+
+
+-->
+</body>
+<script>
+    var x=10;
+    function demo(){ //if u want to execute this line , the above line should execute completely .if any error comes above line ,it cant execute remaining lines 
+        console.log(x)
+    }
+    demo()
+
+function sqr(num){ 
+ var ans = num * num
+ return ans 
+}
+var n=5;
+var b=sqr(n);
+console.log(b)
+
+function func1() {
+  console.log("Function 1");
+}
+
+function func2() {
+  console.log("Function 2");
+  func1();
+}
+
+function func3() {
+  console.log("Function 3");
+  func2();
+}
+
+func3();
+    
+// undefined and not defined 
+// console.log(y)  not defined..not declared and not assigned
+//var x; cons.log(x) undefined..not assigned 
+/*
+-----------------------------------------
+demo();
+var demo=()=>{
+    console.log("hi")
+}  // demo ois not a func error. bcz calling a func before VAR . if calling a func before a func is possible.calling a func after a var is also possib;e   
+
+
+console.log(demo);
+var demo=()=>{
+    console.log("hi")
+} u will get undefined. bcz variable demo hasn't been assigned.
+
+
+
+var demo=()=>{
+    console.log("hi")
+}
+console.log(demo); u will get ()=>{console.log("hi")}
+
+
+shortest js : empty js file 
+if u want to see multiple commnts ,go to sonsole and type window/this which is a global element 
+var b=10
+console.log(window.b) =console.log(b)
+*/
+</script>
+</html>

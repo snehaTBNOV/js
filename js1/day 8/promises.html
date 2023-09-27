@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //Promises in JavaScript are a way to handle asynchronous operations, making it easier to work with asynchronous code and avoid "callback hell." A promise represents a value that may not be available yet but will be resolved or rejected at some point in the future. It has three states: pending, fulfilled, or rejected.
+    //     let promise = new promise (function(resoleve,reject){
+    //   //do something
+    //     })
+
+    // const myPromise = new Promise((resolve, reject) => {
+    //   // Perform some asynchronous operation here...
+    //   const data = fetchDataFromServer();
+    //   if (data) {
+    //     resolve(data); // If successful, resolve with the data.
+    //   } else {
+    //     reject("Error fetching data"); // If failed, reject with an error message.
+    //   }
+
+    //   Consuming a Promise:
+    // To consume the value produced by a Promise, you use the .then() method to handle successful resolutions and the .catch() method to handle rejections.
+
+    // myPromise.then((data) => {
+    //   console.log("Data fetched successfully:", data);
+    // }).catch((error) => {
+    //   console.error("Error occurred:", error);
+    // });
+    // });
+
+    //-----------------------------types---------------------------
+    /*fulfilled--successfully completed promises
+ ,rejected--not completed promises
+ ,pending--neither successful and nor rejected
+ ,settled--either rejected or selected
+*/
+
+    // let promise =new Promise(function(resolve,reject)
+    // {
+    //     let a="sneha";
+    //     let b="sneha"
+    // if (a==b){
+    //     resolve();
+    // }else{
+    //     reject();
+    // }
+    // })
+
+    // promise.then(function(){
+    //  alert("succe")
+    // }).catch(function(){
+    //     alert('not')
+    // })
+
+    // //---------------------------
+
+    // const successfulPromise = new Promise(function(resolve, reject) {
+    //   // Simulating a successful asynchronous operation that will resolve after a delay
+    //   setTimeout(function() {
+    //     resolve("Promise fulfilled!"); // Fulfill the promise with a value
+    //   }, 2000); // Delay of 2 seconds
+    // });
+
+    // successfulPromise
+    //   .then(function(result) {
+    //     console.log("Fulfilled:", result); // Output: Fulfilled: Promise fulfilled!
+    //   })
+    //   .catch(function(error) {
+    //     console.error("Rejected:", error);
+    //   });
+
+    //   let promi= new Promise(function(resolve,reject){
+    //    // resolve("resvd")
+    // reject("fail")
+    //   })
+
+    //   promi.then(function(msg){
+    //      alert("succ",msg)}
+    //      ,function(err){  //if u use promise automatically it will check the ,function(even without writing .catch )
+    //       alert("fail",err)}
+    //   )
+    // The catch() method is used to handle errors in Promise chains, and it works similarly to the error callback provided in .then(). However, the use of .catch() is optional. If you don't explicitly add a .catch() at the end of the Promise chain, any unhandled rejections (errors) will be caught by the error callback provided in the .then() method.
+
+    // --------------------------------------------------------------
+    // let promise = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     let msg="hiy"
+    //     if (msg=="hi"){
+    //       resolve("won");
+    //     }else{
+    //       reject("lose")
+    //     } 
+    //   }, 2000);
+    //   var a=10;
+    //   var b=30;
+    //   console.log(a+b)
+    //   })
+    //    .then((msg) => {
+    //   console.log(msg); //new will create constructor
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       console.log(msg + "enjoy");
+    //     }, 3000);
+    //   })
+    //   .then((msg)=>{
+    //     console.log(msg)
+    //   })
+    // }).catch((msg)=>{
+    //   console.log(msg)
+    // });
+ 
+   //u can print errors based on time/order
+
+  //print 1 2 3 4 5 in 1 sec delaay-------------------------------------------
+  
+// for(var i=1;i<=6;i++)
+//   del(i)
+
+//   function del(i){
+//     setTimeout(()=>{
+//       console.log(i)
+//     },i*3000)
+//   }
+// function demo(){ // when u use var u got all 7, but u use let u will get all val
+//     for(let i=1;i<=6;i++){
+      
+//       setTimeout(()=>{
+//        console.log(i)
+//       },i*3000)
+//     }}
+//     demo()
+
+
+    // --------------armstrong---------------------
+    //153=1+125+27=153
+
+//      function demo(num){
+//          var num;
+//              var dig=num.toString();
+//              var a= dig.length
+//              var result = 0;
+//          for (var i=0;i<a;i++){
+          
+//            var b= parseInt(dig[i],10)//base 10 convrt string to num 
+//            var c= Math.pow(b,a)
+//            result+=c
+//          }
+//        return result===num
+//     }
+//     console.log(demo(1634))
+
+
+//     function isArmstrong(num) {
+//   var dig = num.toString();
+//   var a = dig.length;
+//   var result = 0;
+
+//   function calculateSum(index) {
+//     if (index === a) {
+//       if (result === num) {
+//         console.log(num + " is an Armstrong number.");
+//       } else {
+//         console.log(num + " is not an Armstrong number.");
+//       }
+//     } else {
+//       var b = parseInt(dig[index], 10);
+//       var c = Math.pow(b, a);
+//       result += c;
+//       index++;
+//       setTimeout(calculateSum, 0, index);
+//     }
+//   }
+
+//   calculateSum(0);
+// }
+
+// isArmstrong(1634);  //------------------------------------------------------------
+
+var n1=parseInt(prompt("n1"))
+var n2=parseInt(prompt("n2"))
+
+for (var i=n1;i<n2;i++){
+  var dig=i.toString().length
+  var r=0;
+  let p=i;
+  while (p>0){
+    let rem=p%10
+    r=r+ (rem**dig)
+    p=parseInt(p/10)
+  }
+  if (r==i){console.log(i)}
+}
+
+//-----------------------------------------------
+function isArmstrongNumber(number) {
+  const numStr = number.toString();
+  const numDigits = numStr.length;
+  let sum = 0;
+
+  for (let digit of numStr) {
+    sum += Math.pow(parseInt(digit), numDigits);
+  }
+
+  return sum === number;
+}
+
+function findArmstrongNumbers(start, end) {
+  const armstrongNumbers = [];
+
+  for (let i = start; i <= end; i++) {
+    if (isArmstrongNumber(i)) {
+      armstrongNumbers.push(i);
+    }
+  }
+
+  return armstrongNumbers;
+}
+
+const startRange = 1;
+const endRange = 200;
+const armstrongNumbers = findArmstrongNumbers(startRange, endRange);
+console.log("Armstrong numbers between 8 and 200:", armstrongNumbers);
+
+  </script>
+</html>

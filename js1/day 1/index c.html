@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CITY OF LOVE</h1>
+    
+    <p>People call Paris “the City of Love” because of the romantic atmosphere it exudes. In fact, The City of Love isn’t just a random nickname given to Paris; it’s the perfect description anyone who visited the French capital would give to the city for all the romantic vibes they find there.</p>
+    <button onclick="demo();">click here to see top attractions</button>
+    <button type="button" onclick="document.getElementById('demo').innerHTML+=Date()">click here to see the date</button>
+    <!-- under the innerhtml it is setting up the date.it wont work when u dont use demo id in anywhere . it will take 
+    demo from the p elemnt .so when u clcik on the button it willtake the demo elemnt and will do the tasks  -->
+    <p id="demo">hello paris </p>
+    <!-- when u click it will change hello paris to date . if u want both para element and date use += Date() -->
+
+    <script>
+        function demo(){
+            alert("go to this site to view more attractions")
+            console.log("visit first place")
+        }
+
+        //console is used for debuuging .inspect see the console u can see the line number also 
+    </script>
+</body>
+</html>

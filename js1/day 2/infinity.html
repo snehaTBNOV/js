@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+    let x=2;
+    let txt="";
+    while(x != Infinity){
+        x=x*x;
+        txt=txt + x + "<br>";
+    }
+    document.getElementById('demo').innerHTML=txt
+</script>
+<!-- let myNumber = 32;
+myNumber.toString(32);
+myNumber.toString(16);
+myNumber.toString(12);
+myNumber.toString(10);
+myNumber.toString(8);
+myNumber.toString(2);
+
+default is base 10 . but u can change it usig to string 
+
+
+-------------------------------
+object
+// x is a number
+let x = 123;
+
+// y is a Number object
+let y = new Number(123);
+
+document.getElementById("demo").innerHTML = typeof x + "<br>" + typeof y;
+------------------------------------
+
+Method	Description
+toString()	Returns a number as a string
+toExponential()	Returns a number written in exponential notation
+toFixed()	Returns a number written with a number of decimals
+toPrecision()	Returns a number written with a specified length
+ValueOf()	Returns a number as a number
+
+let x = 9.656;
+x.toFixed(0);
+x.toFixed(2);
+x.toFixed(4);
+x.toFixed(6);
+----------------------------------------------
+
+valueof() returns number as number
+
+let x = 123;
+
+document.getElementById("demo").innerHTML = 
+  x.valueOf() + "<br>" +
+  (123).valueOf() + "<br>" +
+  (100 + 23).valueOf();
+
+  ------------------------------
+  arrays
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let length = fruits.length;
+--------------------------
+
+-->
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onmouseover="demo3()">
+    <!-- <button onclick="demo()">click</button> -->
+    <button onmouseover="demo()" onmouseout="demo1()">click</button>
+    <p id="para" style="background-color: aquamarine;" >hellooo</p>
+    <input type="number" onchange="demo2(this.value)">
+</body>
+<script>
+    function demo(){
+        let a= document.getElementById('para')
+        a.innerHTML="hello this is mouseover event"
+        a.style.backgroundColor="violet"
+    }
+    function demo1(){
+        let a= document.getElementById('para')
+        a.style.backgroundColor="aquamarine"
+    }
+    function demo2(val){
+        alert(val)
+    }
+    function demo3(){
+        alert()
+    }
+</script>
+</html>

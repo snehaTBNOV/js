@@ -1,0 +1,98 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+h2{
+    font-family: "Montserrat", sans-serif;
+}
+
+.model-img,.model-img1{
+    width: 100%;
+    height: 260px;
+}
+#cloth-acc{
+    width: 100%;
+   
+}
+
+.cloths-id,.ac-id{
+    width: 85%;
+    display: flex;
+    justify-content:space-between ;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.cloth-card,.ac-card{
+    width: 19%;
+    box-sizing: border-box;
+    
+    /* padding: 0px;
+    margin: 0px; */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5)
+}
+
+.cloth-card:hover,.ac-card:hover{
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.header-tag,.header-tag1{
+    padding-top: 20px;
+    padding-left: 30px;
+} 
+
+.detail-div,.detail-div1{
+   padding: 6px 8px;
+
+}
+.card-heading,.card-heading1{
+    
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+        color: rgb(46, 45, 45);
+    
+}
+.pri-div,.pri-div1{
+    padding: 6px 8px;
+}
+.prices,.prices1{
+    padding: 5px;
+    color: rgb(19, 144, 153);
+    font-weight: 600;
+}
+.brand-div,.brand-div1{
+    padding: 6px 8px;
+}
+.brand-name,.brand-name1{
+    /* padding-top: 5px; */
+    color: #5a5959;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .cloths-id {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .cloth-card,.ac-card{
+      width: 48%; /* Adjust the width to fit 2 cards per row */
+     
+      margin-right: 4px;
+      margin-top: 10px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+  }

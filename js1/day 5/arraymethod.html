@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //-length-------------
+    const car=["audi","bmw","mini","nano","kia"]
+    //alert(car.length)
+    //alert(car[0])
+    //tostring----------------------
+    //join
+    console.log(car.pop())//removes last element
+    console.log(car.push("omni"))
+    console.log(car.shift())//audi will be shifted (absent)
+    delete car[1]//will empty tht portion 
+    console.log(car)
+    alert(car.join("--"))
+    const bike=["ktm","duke","honda","scooty","bullet"];
+    const cycle=["ladybird","hero","var"]
+    console.log(car.concat(bike))
+    console.log(car.concat(bike,cycle))
+
+
+    //2d array
+    const a=[["abc","def"],["ghi","jkl"],["mno","pqr"]]
+    console.log(a[0])//"abc","def"
+    console.log(a[0].concat(a[1],a[2])) //for converting 1 d array
+    console.log(a.flat()) //directly converting to 1d 
+    //if u want to store 
+    var b= console.log(a.flat())
+
+    // if u have 5*5 squares . suppose we hv 3 variable 10,20,30 . it occupies randomly.
+    //if there is an array if 5 length ,compiler checks for consecutive spaces.it wont fill randomly 
+</script>
+</html>

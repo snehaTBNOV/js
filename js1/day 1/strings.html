@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <p id="para3"></p>
+    <p id="para4"></p>
+    <script>
+        let mystring;
+        mystring="helo world"
+        console.log(mystring);
+        console.log("Length of my string :",mystring.length);
+        // to find the length of string
+
+        let str="white,black,blue";
+        //in built function to get black only 9extract the part of html)
+        console.log(str.slice(6,12));
+        let newstr=str.slice(6,12);
+        document.getElementById('para').innerHTML=newstr
+
+        let newstr1=str.slice(6);
+        document.getElementById('para1').innerHTML=newstr1
+
+        let newstr2=str.slice(-6);
+        document.getElementById('para2').innerHTML=newstr2
+         
+        //substring in js 
+        let sub= "sneha,sajin";
+        console.log(sub.substring(6,11));
+        //difference b/w substring and slice is taht 11 represent the length after 6 th position 
+        //where as in slice-it is the position 6 tha nd 11 th position
+
+        //Repalce in string 
+
+        let word="please come uk";
+        let word2="hi how are you "
+        let word3="BYE"
+        console.log(word.replace("uk", "Paris"));
+        console.log(word2 + word);
+        console.log(word2.concat(word3));
+        console.log(word2.toLowerCase)
+        
+        let neword=word.replace("uk", "Paris");
+        document.getElementById('para3').innerHTML=neword
+// replaceall option is not wrking 
+        let word4="i am snehaaa. snehaaa is wrking in IT";
+        let word5=word4.replaceAll("snehaaa","sneha");
+        
+        document.getElementById('para4').innerHTML=word5;
+
+//if u want to upper case sneha alone first slice it 
+
+let word6=word5.slice(5,17);
+// console.log(word5.replaceAll("sneha","SNEHA"));
+console.log(word5.toUpperCase());
+
+let abc="sneha"
+console.log(abc.charAt(3))
+
+// let string="EDYODA"
+// let x;
+// if (x=string) {
+//     document.write("YES")
+// } else {
+//    document.write("no")
+// }
+
+let string = "EDYODA";
+if (string == "EDYODA" || string == "edyoda" ) {
+    alert("YES")
+} else {
+    alert("NO")
+}
+
+
+
+
+
+    </script>
+</body>
+<!-- 
+   trim-------------------- 
+    let text1 = "      Hello World!      ";
+let text2 = text1.trim();
+------------------------
+pad---------
+let text = "5";
+text = text.padStart(4,"0");
+
+document.getElementById("demo").innerHTML = text;
+-----------------------------------------------
+
+split----------
+text="a,b,c,d"
+text="a|b|c|d"
+
+text.split(",")    // Split on commas
+text.split(" ")    // Split on spaces
+text.split("|") 
+-----------------------------------------
+locate (indexof)
+
+let text = "Please locate where 'locate' occurs!";
+let index = text.indexOf("locate");
+
+a=7
+Both indexOf() and lastIndexOf() return -1 if the text is not
+------------------------------------
+search()
+let text = "Please locate where 'locate' occurs!";
+text.search("locate");
+a=7
+----------------------------------
+match()
+let text = "The rain in SPAIN stays mainly in the plain";
+text.match(/ain/gi);
+3
+------------------------------------
+
+
+
+-->
+</html>

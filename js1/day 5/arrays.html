@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+    const name =["anc","cde","ghy"];
+    const a =["anc",123,"ghy"];
+    name.unshift("red")//it shift 1 position ,costly ,overwrite
+    console.log(name);
+    
+    //here it will dynamically convert to string (123)
+    // holds more than one value in as single data type 
+    //it can store multiple value in a varibale --
+
+
+// const b= array ("sneha","bala","roop")
+// console.log(b)
+
+const c=[];
+c[0]="abc"
+c[1]="123"
+c[2]="hj"
+console.log(c)
+// document.getElementById('demo').innerHTML=c;
+ document.write(c)
+//difference b/w doc .write is when u see the elemnt after inspecting u cant see them inside p elemnt . but in .innerhtml u can see them in p 
+
+
+const name1=new Array("abc","123","wer")
+name1.push("apple") // for adding an element
+const name2=name1.toString();//convertingvarray to string
+
+// The unshift() method adds new elements to the beginning of an array.The unshift() method overwrites the original array.
+
+console.log(name1.length) 
+console.log(name2)
+console.log(name1[name1.length-1]) //find the last element of an array 
+
+const name3={name:"sneha",age:27}
+console.log(typeof(name3))
+
+//length is not available for thsi key value pairs
+
+
+//---------------iteration of arrays--------------------------
+
+const fruits=["apple","orange","kiwi","grapes","plum","pear"]
+// for (var i in fruits){
+//     console.log(fruits[i])
+// }
+
+// for (let a=0;a<fruits.length;a++){
+//    console.log(fruits[a])
+// } // ascending
+for (let a=fruits.length-1;a>=0;a--){
+   if (fruits[a]=="kiwi")//print only kiwi
+   console.log(fruits[a])
+}//descening
+//-----------------------for each--------------------------------------
+/*const colors=["red","blue","pink","blue","grey"]
+for(a=colors.length-1;a>=0;a--){
+    console.log(colors[a]);
+}
+let text;
+colors.foreach(demo);
+document.getElementById('para').innerHTML=text;
+
+function demo(val){
+    text+=val;
+   
+}
+--------------------------------------------------------------------*/
+
+</script>
+</html>

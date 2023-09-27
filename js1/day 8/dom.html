@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "demo3">
+    <p id="demo" >hiiii sajin </p>
+</div>
+     <p id="demo1" >hiiii sneha</p>
+     
+    <p id="demo2" class="de">hiiii enjoy ur travel</p> 
+    <p class="de">hiiii enjoy ur travel</p>   
+    <p class="de">hiiii enjoy ur travel</p>   
+    <p class="de">hiiii enjoy ur travel</p>   
+    <p class="de">hiiii enjoy ur travel</p>   
+    <p class="de">hiiii enjoy ur travel</p>   
+    <p class="de">hiiii enjoy ur travel</p>   
+    <p class="de">hiiii enjoy ur travel</p>   
+    <!-- here query selctor can selct elemnts based on a[]indexes -->
+   
+
+    <form id="form1" action="get">
+        firstame: <input type="text" value="sneha" name="fname"><br>
+        secondname: <input type="text" value="sajin" name="lnma"><br>
+        <input type="submit" value="submit">
+    </form>
+    <p id="demo4" ></p>
+</body>
+<script>
+
+    // let y=document.getElementById('demo')
+    // alert(y) //[object HTMLParagraphElement]
+    // let z=document.getElementsByTagName('p')
+    // alert(z) //[object HTMLCollection] 
+    // let p=document.getElementsByClassName('de')   
+    // alert(p) //[object HTMLCollection]  
+//the below code is used to create paragrapgh ,node to insert the content ,called by innerhtml -------------------
+//     let el=document.getElementById("demo")
+// el.innerHTML="hello hii "
+
+//     const para=document.createElement("p")
+//     const node = document.createTextNode("hi my name is sneha.para content")
+//     para.appendChild(node);
+//     const ele=document.getElementById('demo3')
+//     ele.appendChild(para);
+
+
+// //finding html elme by id ---------------------------------------
+
+// let a=document.getElementById("demo1")
+// document.getElementById("demo4").innerHTML="am working"+a.innerHTML
+
+/*----------------------------------------------------------------*/
+
+// let a= document.getElementsByTagName("p")
+// document.getElementById("demo4").innerHTML=a[0].innerHTML + "this is tag .it will choose paragrapgh element"
+//u can also use class names. so in elements u should add class names -----------------------------------------------
+
+
+//
+// const x = document.forms["form1"];
+// let text = "";
+// for (let i = 0; i < x.length ;i++) {
+//   text += x.elements[i].value + "<br>";
+// }
+// document.getElementById("demo4").innerHTML = text;
+
+//u can change the content of elemnt using inner html . so if u put img in body, and write a script docum.innet=new image. tht old img will be replaced by new one .and js 
+//can create dynamic html element  date()  -----------------------------------------------------------------------------------
+
+
+let a= document.querySelectorAll("p.de")
+document.getElementById("demo4").innerHTML=a[0].innerHTML
+alert(a.length)
+for(let i=0;i<=a.length;i++){
+    console.log(a[i])
+}
+
+
+
+//------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*getElementById is a method, while innerHTML is a property.The easiest way to get the content of an element is by using the innerHTML property.
+
+The innerHTML property is useful for getting or replacing the content of HTML elements.
+
+u can acess via 3 methods finding html elemnts
+document.getElementById(id)	Find an element by element id
+document.getElementsByTagName(name)	Find elements by tag name
+document.getElementsByClassName(name)	Find elements by class name
+
+changing elemnt 
+Property	Description
+element.innerHTML =  new html content	Change the inner HTML of an element
+element.attribute = new value	Change the attribute value of an HTML element
+element.style.property = new style	Change the style of an HTML element
+Method	Description
+element.setAttribute(attribute, value)	Change the attribute value of an HTML element
+
+creating & deleting 
+
+document.createElement(element)	Create an HTML element
+document.removeChild(element)	Remove an HTML element
+document.appendChild(element)	Add an HTML element
+document.replaceChild(new, old)	Replace an HTML element
+document.write(text)
+
+adding events
+document.getElementById(id).onclick = function(){code}*/
+
+    // --------------------------------------------------------------------------------------
+    // function fac(num){
+    //     var num;
+    //     if (num==0 || num==1){
+    //     return 1}
+    //     else{
+    //         var res=1;
+    //         for(var i=2;i<=num;i++){
+    //             res=res*i
+    //         }
+    //         return res;
+    //     }
+    // }
+
+    // var a= fac(6)
+    // console.log(a)
+
+    // function fa(f){
+    //     var f
+    //     if (f<0){alert("neg num")}
+    //     if (f==0 || f==1){
+    //     return 1}
+    //     var b=1;
+    //     for(var i=f;i>=2;i--){
+    //        b=b*i 
+    //     }
+    //     return b
+    // }
+    // var c=parseInt(prompt("enter"))
+    // d=fa(c)
+    // console.log(d)
+    // ------------------------------------------------------
+    /* The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+    doc object model
+    */
+
+</script>
+</html>

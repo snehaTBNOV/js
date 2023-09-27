@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello</p>
+    <p id = "ab">sneha</p>
+    <p id = "ab">hello</p>
+    <p id = "ab">sneha</p>
+    <p id = "ab">hello</p>
+    <p id = "ab">sneha</p>
+    <p id = "ab">hello</p>
+    <p id = "ab">sneha</p>
+    <p id="de"></p>
+</body>
+<script>
+    a=[1,2,3,5,9,8]
+    a.forEach(function(b){
+        console.log(b*2)
+    })
+
+    //----
+
+    ac=[5.8,9,8,7,6,7]
+    d=""
+    ac.forEach(num);
+    function num(x){
+        d+=x
+    }
+    console.log(d)
+
+
+    //  for of
+    const numbers = ["a","n","f"];
+
+for (const number in numbers) {  //if u use for in u will get 0,1,2 as op . for of (a,b,c)
+  console.log(number);
+}
+
+const person = {
+  name: 'John',
+  age: 30,
+  occupation: 'Engineer'
+};
+
+for (let key in person) {   //if u use of -it is not iterable.for in is used to iterate the properties of object .
+  console.log(key + ': ' + person[key]);
+}
+
+// console.log(Objects.keys(person))
+// console.log(Objects.values(person))
+
+
+//dom 
+// document.getElementsByTagName("p")[0].innerHTML="hi"
+
+// let q= document.getElementsByTagName("p")
+// document.getElementById("de").innerHTML=q[0].innerHTML+q[1].innerHTML +"this is"
+
+for (let i=0;i<=document.getElementsByTagName("p").length;i++){
+// document.getElementById("de").innerHTML=i[0].innerHTML
+document.getElementsByTagName("p")[i].innerHTML
+
+}
+alert(i.length)
+
+</script>
+</html>

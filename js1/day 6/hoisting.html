@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // default behaviour of js is hoisting of moving decalaration at the top 
+
+
+//o/p will be sneha even if u call function before implementaion
+    demo();
+    function demo(){
+        console.log("sneha")
+    }
+  
+    
+// but in here o/p will be undefined.bcz var is after console.
+console.log(x) //if u pput z ,then op is z is not defined
+var x="sneha"//here compiler will check for x first . so in this case it is undefined 
+
+
+//  op will be 10.
+z=10;
+console.log(z)
+var z;  //here var can be declared after calling . 
+
+// undefined
+console.log(y)
+y=10;
+var y;
+// the above cases we used VAR 
+
+//let -----------------
+c="Nano";
+console.log(c);//Cannot access 'c' before initialization
+let c;
+
+//const
+// d="Nano";
+// console.log(d);
+// const d; // here const ust be intialized 
+
+//temporal dead zone-block of codes in let and const which can only used if they hv values.otherwise we cant access.variables in tht zone is inaccessible
+
+</script>
+</html>

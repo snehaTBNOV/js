@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>function in js</h1>
+    <input type="text" placeholder="enter value of a" id ="a"><br>
+    <input type="text" placeholder="enter value of b" id ="b"><br>
+    <input type="button" value="add" onclick="demo();">
+    <p id="sum"></p>
+
+</body>
+<script>
+    function demo(){
+    var a = parseInt(document.getElementById('a').value)
+    var b = parseInt(document.getElementById('b').value)
+
+   
+
+        document.getElementById('sum').innerHTML= a + b
+    }
+    
+// --------------------------
+//     function demo1(){
+//         var a=10;
+//         var b=30;
+//         console.log(a+b)
+
+//     }
+//     var z=demo1();
+//     console.log(z)//undefined
+// ---------------------------------------------------------
+function demo1(){
+        var a=10;
+        var b=30;
+        console.log("demo1",a+b) //40
+        function demo2(){
+        var a=10;
+        var b=30;
+        console.log("demo 2",a+b)  
+        }
+        demo2(); //40
+        return demo2// demo1= demo2 function .so this will print The return statement return demo2 in demo1() returns the function demo2 itself. This means that the variable z will be assigned the reference to the function demo2.
+
+    }
+    console.log(demo1) //here it will print whole fn .
+    var z=demo1();//The demo1() function is called, so it logs "demo1" and the sum of 10 and 30 (which is 40) to the console, and then it calls demo2(), which logs "demo2" and the sum of 10 and 30 (40) to the console. Finally, demo1() returns demo2.
+    console.log(z)
+    //op=function demo2(){
+        // var a=10;
+        // var b=30;
+        // console.log(a+b)  
+        // }   demo1=return demo 2 , demo2 is the above function.
+    z(); // console.log("demo 2",a+b) print this op .The z variable is assigned the reference to the demo2() function. Therefore, when you call z(), it executes demo2() again and logs "demo 2 40" to the console.
+//----------------------------------------------------------------------
+
+
+/* global execution context (gec)
+gec has both memory allocation component and code execution component
+
+memory -assign the memory like a=10 a will be assigned
+code-10 will be assigned
+
+there are 2 phases. phase 1 memory initilaization ,2 nd is execution 
+
+suppose var x=10
+fun demo(){
+    var a=10
+    console
+}
+
+x will be under memory, x store as undefined
+anf whole function will be written here.
+
+code comp contains again memory and code component.
+so the local variable is allocated.
+
+once the function is executed the whole sub mem- code comp is deleted,once we execute the whole prgm the entire memo ,code is deleted
+
+
+right click--inspect--sources,index.js--anonymous(gec)
+once each and every part is completed call stack will be empty */
+
+
+</script>
+</html>

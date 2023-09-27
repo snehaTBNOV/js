@@ -1,0 +1,96 @@
+@font-face{
+    font-family:myFont;
+    src:url(OpenSans-Regular.ttf);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    font-family: myFont;
+}
+h2{
+    font-family: myFont;
+}
+
+
+.model-image{
+    width: 200px;
+    height: 260px;
+}
+
+.model-image1{
+    width: 200px;
+    height: 260px;
+}
+#clothing-acc-section{
+    width: 100%;
+}
+.cloths-id{
+    width: 85%;
+    display: flex;
+    justify-content:space-between ;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.Acc-id{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.cloth-card{
+    width: 17.5%;
+    box-sizing: border-box;  
+    padding: px;
+    margin: 0px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5)
+}
+.cloth-card:hover{
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+.Acc-card{
+    width: 17.5%;
+    box-sizing: border-box;  
+    padding: px;
+    margin: 0px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5)
+}
+.Acc-card:hover{
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+.header-tag{
+    padding-top: 20px;
+    padding-left: 50px;
+}
+.header-tag1{
+    padding-top: 10%;
+    padding-left: 50px;
+}
+
+.details-div{
+    padding-top: 5PX;
+    padding-left:10px;
+}
+.details-div1{
+    padding-top: 5PX;
+    padding-left:10px;
+}
+.card-header{
+    color: rgb(46, 45, 45);
+}
+.card-price{
+    padding-top: 5px;
+    color: rgb(19, 144, 153);
+    font-weight: 600;
+}
+.cloth-brand{
+    padding-top: 5px;
+    color: #5a5959;
+    font-size: 13px;
+    font-weight: 600;
+}

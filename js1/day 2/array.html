@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="demo"></p> 
+</body>
+<script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits.length;
+
+let text = "<ol>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ol>";
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<!-- 
+    array 
+    Array.isArray(fruits);
+
+    ------------
+    var fruits = ["Banana", "Orange", "Apple"];
+document.getElementById("demo").innerHTML = fruits instanceof Array;
+--------------------------
+<p>The pop() method removes the last element from an array.</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = 
+fruits.pop();
+document.getElementById("demo2").innerHTML = fruits;
+----push add elements
+----------------------------------------
+The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+shift() removes the last element
+Using delete leaves undefined holes in the array.
+
+Use pop() or shift() instead.
+
+The splice() method can be used to add new items to an array:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 2, "Lemon", "Kiwi");
+
+-----------------------------
+sort array in ascendinf ,dec#
+
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = points;
+
+points.sort(function(a, b){return b - a});
+document.getElementById("demo2").innerHTML = points;
+--------------
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+
+<p id="demo"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = points;  
+
+function myFunction1() {
+  
+  document.getElementById("demo").innerHTML = points.sort();
+}
+function myFunction2() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = points;
+}-----------------------------------------
+Math.max.apply to find the highest number in an array:
+ -->
+</html>

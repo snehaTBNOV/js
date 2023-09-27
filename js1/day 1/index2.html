@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>addition of 2 numbers</h1>
+    <button onclick="demo();">click here</button> 
+    <p id="demo1"></p> 
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        
+             let a ,b,c;
+             a=10;
+             b=19;
+            c=a+b;
+            document.getElementById('demo1').innerHTML= "addition is:" + c + "."
+           function demo(){
+            document.getElementById('demo').innerHTML='hello'
+           }
+
+           try{
+            const pi=3.1456788;
+            pi=3.14;}
+            catch(err){
+            document.getElementById('demo2').innerHTML=err
+            }
+           
+            const fruits = ["apple", "banana","cherry"];
+            fruits[0]="orange";  
+            // change an elemnt
+            fruits.push("grapes");
+            // create an elemnet 
+            document.getElementById('demo3').innerHTML=fruits
+           
+        
+    </script>
+<!-- const when you declare:
+
+A new Array
+A new Object
+A new Function
+A new RegExp -->
+
+<!-- "5"+2+3 is considered as string 523
+whereas 2+3+"5" is 55
+
+we hav document.write() for writing .so previous things will remove if u use inside on clic button.
+write.print() for printing ..console.log() for error debygg,inner.html for writing inside html -->
+
+<!-- cost are used for newly craeteda arrays  -->
+</body>
+</html>

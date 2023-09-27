@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <button onclick="demo();">click</button>
+</body>
+<script>
+    //4 types
+    /* 1-- for loop-----------------------------------
+    for(initialization;condition;inc/dec){}
+    
+    
+    
+    */
+   //function demo(){
+    //let p=document.getElementById('para');//so the o/p will be oject para elemnt
+    // alert(p)
+
+    //let p=document.getElementById('para').value//undefined.  
+    // alert(p)
+
+    //let p=document.getElementById('para')  so write some values
+    //p.innerHTML="sneha"
+
+    // let p=document.getElementById('para')
+    // for(i=0;i<5;i++)
+    //  p.innerHTML+=i   //01234
+
+   //}
+/*  2)-------------while--------------------------
+
+    while(condition)
+{
+    code
+}   
+if u dont know the number of iteration -- go for while
+
+
+
+*/
+// var a=1;
+// while(a<=5){
+//     console.log(a);
+//     a++
+// }
+
+
+/* 
+-------------3) do while-----------------------------------
+do{code}
+while{condition}
+*/
+// var b=1;
+// do{
+//     console.log(b);
+//     b++;
+// }while(b<=5) //here do while loop executes atleast 1 time whether it is right/wrong 
+
+
+/*----------------4)for in loop----------------------------------------------
+uses im obj
+
+*/
+
+// const obj= {fir:"abc",lst:"def",age:35}
+// for (var i in obj )
+// console.log(i + ":" + obj[i])
+
+// -----------------------5)for of loop---------------------------------------------
+
+// const c=["xyz","xyz","sdh"]
+// for (let v of c){
+//     console.log(v)
+// } 
+
+// //this is same as for loop.the difference u dont need to write condition and iteration in for of loop  
+// for (i=0;i<=c.length-1;i++){
+//  console.log(c[i])
+// }
+
+//----------------------------6 for each   (perform specific action on array elemnt ------------------------
+
+
+// it is applicable for arrays 
+// it needs an array arr.foreach(and it aceepts a function that passes multiple argument)
+const arr=[1,2,3,4,5]
+arr.forEach(function(item){
+  console.log(item)
+})
+// array.forEach(callback(currentValue, index, array) {
+//   code to be executed for each element
+// });
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// numbers.forEach(function(number, index) {
+//   console.log(`Element at index ${index} is ${number}`);
+// });
+
+// numbers.forEach((number, index) => {
+//   console.log(`Element at index ${index} is ${number}`);
+// });
+
+
+
+// const z=[100,200,300,400,500,600]
+// z.forEach(val => console.log(val))
+
+// function foreachloop(){
+//     const demo=[100,200,300,400];
+//     const temparr=[];
+//     demo.forEach(function(demo){
+//         temparr.push(demo+100)
+//     }) 
+//     console.log(demo);
+//     console.log(temparr);
+// }
+// foreachloop();
+
+// for of similar to foreach
+
+// for(let i of arr){
+//   console.log(i)
+// }
+
+//---------------7 man loop------------------------------------
+
+// const p =[1,2,3,4,5]
+// const q=p.map(v=>v*7) // like storage /backup 
+// console.log(q)
+
+
+</script>
+</html>
+

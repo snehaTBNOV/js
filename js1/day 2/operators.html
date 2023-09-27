@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <p id="para1"></p>
+    <button onclick="demo();">click me</button>
+
+    <script>
+        
+        let a=7;
+        
+        let b= 8;
+        let c= a + b ;
+        document.getElementById('para').innerHTML="add is :" +c
+        
+        function demo(){
+
+        
+        let str="hiii"
+        let str1=" sneha"
+        let str2=str+str1;
+        document.getElementById('para1').innerHTML=str2;
+        alert(str1+str)
+
+        let x=150
+        let y="150"
+        // alert(x==y)
+        if (x!==y){
+            alert("not equal")
+        }
+        else{
+            alert("equal")
+        }
+        // = assign
+        //== comparing value
+        //==checking value n type 
+
+    }
+let z=10;
+let z1=20;
+    if(z==11 || z1==20){
+alert("values are correct")}
+else{
+    alert("not correct")
+}
+
+let p=100;
+p++;
+let q=p;
+console.log(q);
+        // if q=p++  q=100 ,after assigning value increases, p=101
+
+
+let w=20;
+document.write(w==20? alert(true):alert(false))
+
+
+let u ='string';
+console.log(typeof(u)? true:false)
+
+
+
+    </script>
+
+
+<!-- logical operators
+|| or
+&& and
+!
+
+type operator
+typeof-- return the type of variable
+instanceof --return true if the type is instance of variable
+
+bitwiseoperator
+
+
+-->
+</body>
+</html>
+
+<!-- The ??= Operator
+The ??= operator is used between two values. If the first value is undefined or null, the second value is assigned.#
+<p>If the first value is true, the second value is assigned.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 100;
+x &&= 5;
+document.getElementById("demo").innerHTML = "Value of x is: " + x;
+
+// Object:
+const person = {firstName:"John", lastName:"Doe"};
+
+// Array object:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Date object:
+const date = new Date("2022-03-25");
+--------------------------------------
+NaN is a JavaScript reserved word indicating that a number is not a legal number.
+
+Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+------------------------------------------------------------------
+
+
+
+-->

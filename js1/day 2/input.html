@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>input in js using prompt</h5>
+    <p id="para"></p>
+    <button onclick="myfunc();">click for magic</button>
+</body>
+<script>
+    function myfunc(){
+        let name = prompt("enter ur name","sneha balagopal");
+        // if u want to add the name dufault value  ("enter ur name","sneha balagopal");
+
+        if (name != null){
+            document.getElementById('para').innerHTML="hello" + name;
+        }
+    }
+</script>
+</html>

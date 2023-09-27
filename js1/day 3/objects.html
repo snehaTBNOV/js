@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //object literals
+   student = {
+    name: "sneha",
+    age:8,
+    class:"3",
+    gender:"f"
+
+   };
+   console.log(student)
+   document.write(student.name + " " +student.age)
+
+   //instance-will allocate new memory
+
+   var stud = new Object();
+   stud.name="sneha";
+   stud.age=5;
+   stud.class=6;
+   document.write(stud.name + stud.age)
+   
+
+   //constructrs--initialise the variable .easy to reciprocate.
+
+   function studinfo(name,age,id){
+     this.name=name;
+     this.age=age;
+     this.id=id;
+   }
+   s=new studinfo("sneha",27,8);
+   s1=new studinfo("sneha",27,8);
+   document.write(s.name+s.age+s.id)
+   document.write(s1.name+s1.age+s1.id)
+</script>
+<!-- object is an entity .js is based on templste not on classes
+
+  1. by creating instances of obj
+2. by object literals
+3. by using constructors-->
+</html>
