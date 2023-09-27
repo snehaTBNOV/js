@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- call(),apply() and bind() are methods polyfills in js
+    obj.prototype -->
+</body>
+<script>
+    // bind()
+    // let obj1={
+    //     name:"sneha"
+    // }
+    // let obj2={
+    //     name:"tb",
+    //     sayHello:function(){
+    //         console.log(this.name) //this will print tb
+    //     }
+    // }
+    // let callfunc=obj2.sayHello.bind(obj1) //but here we create a fun  and choose obj2  and function ,then bind first obj
+    // callfunc()
+// The bind() method creates a new function and when that new function is called it set this keyword to the first argument which is passed to the bind method, and if any other sequences of arguments preceding the first argument are passed to the bind method then they are passed as an argument to the new function when the new function is called.
+
+// call()
+// let obj1={
+//         name:"sneha"
+//     }
+//     let obj2={
+//         name:"tb",
+//         sayHello:function(age){
+//             console.log(this.name + "age is "+ age) //this will print tb
+//         }
+//     }
+//     obj2.sayHello.call(obj1,29)
+
+    // apply
+
+    let obj1={
+        name:"sneha"
+    }
+    let obj2={
+        name:"tb",
+        sayHello:function(...age){
+            console.log(this.name + "age is "+ age) //this will print tb
+        }
+    }
+    // obj2.sayHello.apply(obj1,[29])whtever we are passing tht is treatinga s array 
+</script>
+</html>

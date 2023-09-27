@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./api event .css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--u can use dummy json site for dummy apis  -->
+
+    <!-- https://dummyjson.com/products -->
+
+
+    <div id="container">
+
+    </div>
+    <!-- if u want to see the list of products , just use the at response .products as variable.tehn document .get elemnt by id -->
+    
+    
+    
+    <script src="./api event .js"></script> 
+</body>
+
+</html>
+<!-- API stands for Application Programming Interface. It is a set of rules and protocols that allows 
+        different software applications to communicate and interact with each other. APIs define the methods 
+        and data structures that developers can use to interact with a service, library, or platform without 
+        needing to understand its internal implementation details. 
+    
+    eg :waiter. he has access to kitchen and customer
+
+    sign up:takes all our data and validateda nd stored
+    sign in : validating credential and can access. so all thesea re done by api.
+    4 type of operation can be doen with api
+    crud
+Create: This operation involves adding new data to a system. In the context of an API, it means sending a request to the API to add new data to the database or service it manages.
+Read: Reading refers to retrieving existing data from the system. Through an API, developers can request specific data or a collection of data from the underlying storage.
+Update: Updating involves modifying existing data in the system. APIs provide mechanisms to send requests that update specific pieces of data without affecting the rest of the data.
+Delete: Deleting means removing data from the system. APIs offer methods to send requests that delete specific data entries.
+
+Create: Using the API's "POST" endpoint, you can add a new task to your task list by sending relevant information in the request body.
+Read: You can retrieve a list of all tasks or specific details of a single task using the API's "GET" endpoint.
+Update: If you want to change the status or description of a task, you can use the API's "PUT" endpoint to update the corresponding task entry.
+Delete: To remove a task from the list, you can send a "DELETE" request to the API's designated endpoint.
+In summary, APIs provide a way for developers to interact with external services, libraries, or platforms by defining a set of actions (such as CRUD operations) that can be performed through standardized requests. This abstraction makes it easier for developers to integrate and use functionalities from various sources, leading to more efficient and modular software development.
+--------------------------------------------------------------------------------------------------------------------
+
+sync : executing task 1 by 1.--if a user has performed an operation and it is taking time api call is aking longer amount of tym
+async: execution is independent of other execution
+
+multi threading process--breaking down the current process
+
+
+this entire cycle is called event
+event loop has 3 part 
+1 main context of prgm
+2 call stack (pile of plates, first in first out )
+3 callback queue
+in b/w even loop is setting
+The call stack keeps track of the order in which functions are called and executed, and it helps manage their local variables and execution context.
+when a function is called its exec context is moved to the top and vice versa
+
+when ever they see set timeout(async) it will add in callback q , then once its called it will put in call stack q and execute immediately 
+
+higher order function : a function tht accepts another function as an argument
+eg set timeout
+
+
+-->

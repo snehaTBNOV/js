@@ -1,0 +1,54 @@
+#audio-wrapper,#btn-wrapper{
+   margin: 40px auto; 
+   width: 400px;
+}
+
+#banner{
+    width: 400px;
+    height: 300px;
+    background: url('https://t3.ftcdn.net/jpg/06/05/37/40/240_F_605374009_hEUHatmKPzuHTIacg7rLneAgnLHUgegM.jpg');
+    border-radius: 4px;
+    margin: 0 auto 0 auto;
+    margin-bottom: 10;
+    background-repeat: no-repeat;
+   
+    background-size: cover;
+}
+
+
+#progress-bar{
+    width: 400px;
+    background: grey;
+    height: 10px;
+    border-radius: 10px;
+    margin: 10px auto 0 auto;
+}
+
+#progress{
+    width: 0%;
+    height: 100%;
+    background-color: rgb(41, 170, 202);
+    border-radius: 10px;
+}
+#btn-wrapper {
+    margin-top: 10px; /* Reduce the gap between progress and buttons */
+    text-align: center; /* Center the buttons horizontally */
+}
+
+.bu{
+    background-color: rgb(148, 157, 154);
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+   
+}
+
+.bu:hover{
+    background-color: rgb(41, 170, 202);;
+}
+
+
+
+
+
