@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        use of closue 
+        settimeout
+        memoization
+        currying 
+        iterators
+    </p>
+</body>
+<script>
+    function function1(){
+        let x=7;
+      function  function2(){
+            let y=9
+            console.log(x+y)
+        }
+        function2()
+    }function1()
+</script>
+</html>
+<!-- a fun can access variable defined insidea nd outside 
+let a = 4;
+function myFunction() {
+  return a * a;
+}
+here a i global variable 
+function myFunction() {
+    let a = 4;
+  return a * a;
+}
+here a is local variable .
+
+global variable can be private using closures.
+
+A local variable can only be used inside the function where it is defined. It is hidden from other functions and other scripting code.
+
+Global and local variables with the same name are different variables. Modifying one, does not modify the other.
+
+Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
+
+global variable is discarded /delted until we move to next window / close the window 
+but local variable lifetime is small They are created when the function is invoked, and deleted when the function is finished.
+
+A closure is a function having access to the parent scope, even after the parent function has closed.
+ It means that a closure can access and use variables from its parent scope, even if the parent scope is no longer active.
+a closure is a function that "remembers" its lexical environment even after the function has finished executing.
+function outerFunction() {
+  let outerVariable = "I am from outerFunction";
+
+  function innerFunction() {
+    console.log(outerVariable); // The inner function can access 'outerVariable'
+  }
+
+  return innerFunction;
+}
+
+const closureFunc = outerFunction();
+closureFunc(); // Output: "I am from outerFunction"
+
+In this example, outerFunction contains a variable outerVariable and an inner function called innerFunction. When outerFunction is called and innerFunction is returned, a closure is created.
+The key point to note here is that innerFunction still has access to outerVariable even though outerFunction has already finished executing. 
+This is because innerFunction forms a closure that "remembers" its lexical environment,
+ which includes the variables in the scope of its parent function (outerFunction).
+
+
+closure basically means a function bind together with its lexical env .a function along with a  lexical scope
+The lexical environment is created whenever a new function is invoked or a new block is executed
+------------------------
+Scope:
+Scope refers to the region in your code where a particular variable or function is accessible. In JavaScript, there are two main types of scope: global scope and local scope.
+
+// Global scope
+let globalVariable = "I am in global scope";
+
+function foo() {
+  // Local scope
+  let localVariable = "I am in local scope";
+  console.log(globalVariable); // Accessible within the function (global scope)
+  console.log(localVariable); // Accessible within the function (local scope)
+}
+
+foo();
+console.log(globalVariable); // Accessible outside the function (global scope)
+// console.log(localVariable); // Not accessible outside the function (local scope)
+
+
+
+
+-------------
+
+lexiacl env: is a specific memory where all the variables , functions are stored
+child can access parent, but parent cant 
+->

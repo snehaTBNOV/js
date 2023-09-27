@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.full{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+  .left{
+    width: 40%;
+  }
+  .left > img {
+      width: 100%;
+      margin-top: 50px;
+  }
+  .right {
+    width: 60%;
+    margin-top: 40px;
+    padding-left: 30px;
+  }
+
+.previewImg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 20px;
+  }
+  .previewImg img {
+      margin: 5px;
+      width: 15%;
+      height: 30%;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 6px;
+  }
+
+  .active {
+    border: 2px solid #009688;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        //get-------------------------------------
+    //   $(document).ready(function(){
+    //     $("#bu1").click(function(){
+    //         alert( "this is " + $("#p1").text())
+    //     })
+    //     $("#bu2").click(function(){
+    //         alert(" this is" + $("#p1").html())
+    //     })
+    //     $("#bu3").click(function(){
+    //         alert($("#text").val())
+    //     })
+    //     $("#bu4").click(function(){
+    //         alert($("#w3s").attr("href"))
+    //     })
+    //   })
+//set------------------------------------------------------
+   $(document).ready(function(){
+    $("#bu1").click(function(){
+        $("#p2").text("hello")
+    })
+    $("#bu2").click(function(){
+        $("#p3").html("<b>Hello world!</b>")
+    })
+    $("#bu3").click(function(){
+        alert($("#text").val())
+    })
+
+
+    // $("#bu4").click(function(){
+    //     $("#p2").append("appended")
+    //     $("ol").append("<li>appended</li>")//prepend
+
+    // })
+    $("#bu4").click(function(){
+    //    $("#p2").addClass("abc blue")
+       $("#p2").toggleClass("abc blue")
+       
+    })
+
+
+   })
+
+    </script>
+
+    <style>
+.blue{
+    color: blue;
+    background-color: azure;
+}
+.abc{
+    font-size: xx-large;
+}
+
+    </style>
+</head>
+<body>
+    <p id="p1">this is a <b>para</b></p>
+    <p id="p2" class="blue">this ia a para</p>
+    <p id="p3" class="abc">this ia another para</p>
+    <button id="bu1">show text</button>
+    <button id="bu2">show html</button>
+    <button id="bu3">show val</button>
+    <button id="bu4">show val</button>
+    <!-- <button id="bu4">show a</button> -->
+    <p><input type="text" value="sneha" id="text"> </p>
+    <!-- <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p> -->
+    <ol>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+    </ol>
+</body>
+</html>

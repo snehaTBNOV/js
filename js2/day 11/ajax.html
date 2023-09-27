@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <h1>
+            ajax
+        </h1>
+        <button type="button" onclick="loaddynamic()">click</button>
+    </div>
+  
+</body>
+<script>
+    // function loaddynamic(){
+    //     var x=new XMLHttpRequest()
+    //     x.onreadystatechange=function(){
+    //         if (this.readyState==4 && this.status==200){
+    //             const result=JSON.parse(this.responseText)
+    //             const a=result.date
+    //             const b=result.method
+    //             document.getElementById("demo").innerHTML= "date:"+a +"<br>" +"method" +b
+    //             //this.textFile
+    //         }
+    //     }
+    //     x.open("GET","info.txt",true)
+    //     x.send();
+
+    // }
+    function loaddynamic(){
+        var x=new XMLHttpRequest()
+        x.onreadystatechange=function(){
+            if (this.readyState==4 && this.status==200){
+                const result=this.responseText
+               var a= result.split(",")
+                const b=a[0]
+                const c=a[1]
+                document.getElementById("demo").innerHTML= "date:"+b +"<br>" +"method" +c
+                //this.textFile
+            }
+        }
+        x.open("GET","info2.txt",true)
+        x.send();
+
+    }
+    // function loaddynamic(){
+    //     var x=new XMLHttpRequest()
+    //     x.onreadystatechange=function(){
+        // console.log(this.statuText)
+    //         if (this.readyState==4 && this.status==200){
+    //             document.getElementById("demo").innerHTML= this.responseText //responseText returns the response from js as string /sml
+    //             //this.textFile
+    //         }
+    //     }
+    //     x.open("GET","info1.txt",true) //if the file is in some other path u should give the path name then file name
+    //     x.send();
+
+    // }
+
+// ready stte codes 
+//0: UNSENT - The request has not been initialized.
+// 1: OPENED - The request has been set up.
+// 2: HEADERS_RECEIVED - The request has been sent, and the headers and status are available.
+// 3: LOADING - The response's body is being received (streaming).
+// 4: DONE - The request is completed, and the response data is available.
+
+    // function loaddynamic(){
+    //     var y=new XMLHttpRequest()
+    //     y.onreadystatechange=function(){
+    //         if (y.readyState===4 && y.status===200){
+    //             var z=JSON.parse(y.responseText)  //changing to json
+    //             document.getElementById("demo").innerHTML=z.message
+    //         }
+
+    //     }
+    //     y.open("GET","https://api.example.com/data",true)
+    //     y.send();
+    // }
+
+   
+
+    
+    // xmlhttp is an object to interact with servers.
+</script>
+</html>
+<!-- ajax (asynchronus js and xml) with the help of ajax we can update without reloading the page 
+update specific parts of the page dynamically, providing a smoother user experience. Since AJAX is not limited to XML data anymore, you can use it with various data formats, such as JSON and plain text.
+
+server has 2 types of requs
+1)synch --it follows a seq.so they hv to wait for the data
+2)asynch
+
+
+
+1)first an event is created--it calls the function xmlhttprqst.this object send rqst to server.this is browser send http rqst to server .
+2)server will process it (US) and send back the response(200,400)
+3)then the browser process the data from servers using js.then it will update the page content
+
+adv:
+human readable
+disadv:
+security
+
+
+modern browser can use fetch api instead of xmlhttprequest
+
+The keystone of AJAX is the XMLHttpRequest object.
+
+Create an XMLHttpRequest object   --variable = new XMLHttpRequest();
+Define a callback function--y.onload/y.onreadystatechange=function(){}
+Open the XMLHttpRequest object--xhttp.open("GET", "ajax_info.txt");
+xhttp.send();
+Send a Request to a server#
+
+open(method, url, async)	Specifies the type of request
+
+method: the type of request: GET or POST
+url: the server (file) location
+async: true (asynchronous) or false (synchronous)
+send()	Sends the request to the server (used for GET)
+send(string)	Sends the request to the server (used for POST)
+
+
+-->

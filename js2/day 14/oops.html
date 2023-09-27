@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    //-----------------------this-----------------------------------
+//   const person={
+//     fname:"sneha",
+//     lname:"tb",
+//     age:27,
+//     ismarried:true,
+//     about:function(){
+//         console.log(this.fname," ",this.lname,"is an ambitious girl")
+//     }
+//   }
+
+//   console.log(person.age=35)
+//   console.log(person.about())
+
+
+  //-------------------------------------------------object instantiation-----------
+// function a(name,age,clas){
+//  this.name=name
+//  this.age=age
+//  this.clas=clas
+//  this.setage=function(age){
+//     this.age=age
+//  }
+//  this.getage=function(age){
+//     return this.age
+//  }
+//  this.setname=function(name){
+//     this.name=name
+//  }
+//  this.getname=function(name){
+//     return this.name
+//  }
+//  this.setclas=function(clas){
+//     this.clas=clas
+//  }
+//  this.getclas=function(clas){
+//     return this.clas
+//  }
+// }
+
+// s=new a("abc",9,9) //objec instantiation
+// console.log(s.getage())
+// s.setage(12)
+// console.log(s.getage())
+//-----------------------------------------------------------------------------
+
+// var btn=document.getElementById("btn")
+
+// function butto(e){
+//   console.log(e)
+// }
+// console.log(console)
+// btn.addEventListener("click",butto)
+
+//--------------------------------------------constructor--------------------------------------
+
+
+// class person{
+//     constructor(fname,lname,age){
+//         this.fname=fname
+//         this.lname=lname
+//         this.age=age
+//     }
+//     getage(){
+//        return this.age
+//     }
+//     setage(age){
+//         this.age =age
+//     }
+//     getfname(){
+//        return this.fname
+//     }
+//     setfname(fname){
+//         this.fname =fname
+//     }
+// }
+// var x=new person("sneha","tb",27)
+// console.log(x)
+// x.setfname("abcyyy")
+// console.log(x)
+
+
+
+//-inheritance-------------------------------------------
+//parent 
+class vehicle{
+    constructor(fuelca){
+        this.fuelca=fuelca
+    }
+}
+
+class bus extends vehicle{
+    constructor(fuelca,b){
+        super(fuelca);
+        this.b=b
+        
+    }
+}
+
+var z=new bus(23,true)
+console.log(z)
+</script>
+<body>
+    <!-- Use the "extends" keyword to inherit all methods from another class.
+
+Use the "super" method to call the parent's constructor function. -->
+    <button id="btn">click</button>
+</body>
+</html>

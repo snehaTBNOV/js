@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){// dblclick
+            $("p8").hide("slow",function(){
+                alert("hidden")
+            })
+        })
+        $("#p1").mouseenter(function(){  //chain $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+            alert("entered p1")
+        })
+        $("input").focus(function(){
+            $(this).css("background-color","red")
+        })
+        $("input").blur(function(){
+            $(this).css("background-color","blue")
+        })
+        $("#p2").hover(function(){
+            alert("entered p2")
+        },function(){
+            alert("bye")
+        })
+        $("h4").on({
+            mouseenter:function(){
+              $(this).css("color","red")
+            },
+            mouseleave:function(){
+                $(this).css("color","green")
+            },
+            click:function(){
+                $(this).css("font-size","20px")
+            }
+        })
+        $("#hide").click(function(){
+         $("#p3").hide(5000)
+        })
+        $("#show").click(function(){
+         $("#p3").show(1000)
+        })
+        $("#show").click(function(){
+         $("#p3").toggle(1000)
+        })
+
+        $("#bu").click(function(){
+            $(".abc").fadeIn()
+            $(".ab").fadeIn("slow")//fadeout/fadeto/fadetoggle,slide ,amimate
+            $(".a").fadeIn(3000)
+        })
+
+        $("#123").click(function(){
+            $(this).animate({right:"300px"})
+        })
+    })
+
+
+
+
+
+ 
+</script>
+</head>
+<body>
+    <!-- syntaxt of jquery is $(selector).action() 
+    $(this).hide() hide the current elem
+    $(".test").hide() hide this class
+    $("#test").hide() hide this id
+    $("p").hide() hide all para
+
+
+    $(document).ready(function(){
+
+    })
+  
+
+    -->
+<p id="p1">hiii</p>
+<p id="p2">jjjj</p>
+<p id="123">animate</p>
+<h4>heloo how are you</h4>
+fname:<input type="text" name="fname"> <br>
+lname: <input type="text" name="lname">
+    <button>click me to hide p</button><br>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+<p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, deleniti?</p>
+<p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, deleniti?</p>
+<p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, deleniti?</p>
+<p id="p8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, deleniti?</p>
+
+<div class="abc" style="display: none; width: 50px;height: 50px; background-color: brown; margin: 10px;"></div>
+<div class="ab" style="display: none; width: 50px;height: 50px; background-color: rgb(89, 42, 165); margin: 10px;"></div>
+<div class="a" style="display: none; width: 50px;height: 50px; background-color: rgb(42, 165, 89); margin: 10px;"></div>
+    <button id="bu">click</button>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <p id="para1"></p>
+</body>
+<script>
+// const a=[200,75,50]
+// document.getElementById("para").innerHTML=a.reduce(demo)
+
+// function demo(b,c){
+//     return b+c
+// }
+
+
+// const persons = [
+//   {firstname : "Malcom", lastname: "Reynolds"},
+//   {firstname : "Kaylee", lastname: "Frye"},
+//   {firstname : "Jayne", lastname: "Cobb"}
+// ];
+
+// document.getElementById("para1").innerHTML=persons.map(getFullName);
+
+// function getFullName(item) {
+//   return [item.firstname,item.lastname].join(" ");
+// }
+//he Array.map() method creates a new array from the results of calling a function for every element.
+
+const x=[5,2,7,3,1,6,4,1]
+const y=[9,7,5,4,3,2,1,7,8]
+const z=x.concat(y)
+const a=[];//uniq
+
+  for(let i=0;i<z.length;i++){
+    if(!a.includes(z[i])){
+    a.push(z[i])
+    }
+  }
+
+  for (let j=0;j<a.length;j++){
+    for(let k=j+1;k<a.length;k++){
+      if(a[j]>a[k]){
+        const p=a[j]
+        a[j]=a[k]
+        a[k]=p
+      }
+    }
+  }
+  console.log(a)
+
+
+</script>
+</html>
+<!-- first time creating a aaccount- so all the details will be saved in db and its a atype of POST -->

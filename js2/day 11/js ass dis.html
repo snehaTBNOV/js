@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- enter ur name : <input type="text" id="text" onkeydown="demo()">
+
+    <form name="form" method="get" onkeydown="return demo2()">
+    enter your email: <input type="email" id ="email" name="email" required >
+    <input type="submit" name="submit" value="submit">
+    
+    </form> -->
+
+    <button id="btn-login">click</button>
+    <!-- The first event handler assigned to btn.onclick is overridden by the second assignment, so only "second" will be logged when the button is clicked.
+
+The addEventListener method is used to add event listeners, not direct assignments like with onclick. When using addEventListener, both event listeners will work as expected and both "3" and "4" will be logged when the button is clicked.Note that "first" is not logged because it was overwritten by "second" in the btn.onclick assignment. The addEventListener correctly adds both event listeners and logs "3" and "4". -->
+</body>
+<script>
+
+
+ var btn=document.getElementById('btn-login')
+ btn.onclick=function(){
+    console.log("first")
+ }
+ btn.onclick=function(){
+    console.log("second")
+ }
+ btn.addEventListener('click',function(){
+    console.log("3")
+ })
+ btn.addEventListener('click',function(){
+    console.log("4")
+ })
+
+//  var btn = document.getElementById('btn-login');
+//         btn.onclick = function () {
+//             console.log("first");
+//         };
+//         btn.onclick = function () {
+//             console.log("second");
+//         };
+//         btn.addEventListener('click', function () {
+//             console.log("3");
+//         });
+//         btn.addEventListener('click', function () {
+//             console.log("4");
+//         });
+
+
+
+
+
+
+//     function demo(){
+//         var p = document.getElementById("text")
+//         p.value=p.value.toUpperCase()
+//     }
+//    function demo2(){
+//     let c=document.forms[form][email].value
+//     if(c=" "){
+//         alert("error")
+//     }return false
+//    }
+// </script>
+</html>
+<!-- self cosing tag like <br>,<input> unlike <div></div>-->

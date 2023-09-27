@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p id="demo"></p>  
+  <button onclick="demo1()">click</button>
+</body>
+<script>
+    function demo1(){
+     window.location.assign("https://www.w3schools.com")
+    }
+
+document.getElementById("demo").innerHTML = "screen width is "+ window.location.href
+
+</script>
+</html>
+<!-- browser object model-it is the method of communication with browsers.
+no rules
+
+window.document.getElementById("header"); same as document.getElementById("header");
+
+
+window.open() - open a new window
+window.close() - close the current window
+window.moveTo() - move the current window
+window.resizeTo() - resize the current window
+
+we can see window.innerHeight
+window .innerWidth
+
+The screen.width (window.screen.width)---property returns the width of the visitor's screen in pixels
+screen.width
+screen.height
+screen.availWidth
+screen.availHeight
+screen.colorDepth
+screen.pixelDepth
+
+
+
+The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
+window.location.href returns the href (URL) of the current page
+window.location.hostname returns the domain name of the web host
+window.location.pathname returns the path and filename of the current page
+window.location.protocol returns the web protocol used (http: or https:)
+window.location.assign() loads a new document
+
+window.navigator ,window .alert,
+The setTimeout() and setInterval() are both methods of the HTML DOM Window object.
+-->

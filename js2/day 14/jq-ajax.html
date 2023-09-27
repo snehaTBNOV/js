@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      // $(document).ready(function(){
+      //   $("#bu").click(function(){
+      //       $("#p1").load("a.text")
+      //   })
+      // })
+
+      $(document).ready(function(){
+        $("#bu").click(function(){
+         $.get("a.text",function(data,status){
+          alert(data+ status)
+         })
+        })
+      })
+
+    </script>
+</head>
+<body>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex possimus iure veritatis aspernatur eum est amet aut, cumque voluptatem tempore.</p>
+    <button id="bu">click</button>
+</body>
+</html>
+<!-- <p>First Para</p>
+
+<p>Second Para</p>
+
+<p>Third Para</p>
+
+<p>Fourth Para</p>
+
+
+
+Which paragraph will be selected by the following code?
+
+$("p").eq(2) based on index 
+How do you handle error in GET request using jQuery?
+$.get(URL,callback).fail(callback)
+
+Keys with non-function values are called Properties
+
+Keys with function values are called Methods
+
+Classes can be used to create more objects
+JavaScript supports multi-level inheritance
+
+How can you make PUT and DELETE request in jQuery?
+$.ajax(type: "PUT")
+$.ajax(type: "DELETE")
+
+
+-->

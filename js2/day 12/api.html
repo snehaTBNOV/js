@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <button onclick="demo()">api calls</button>
+</body>
+<script>
+//     function demo(){
+//     const a=new XMLHttpRequest()
+//     a.open("GET","https://jsonplaceholder.typicode.com/users")
+
+//     a.onload=function(){
+//         if(a.status===200){
+//             const data=JSON.parse(a.responseText)
+//             //if u want to see all names 
+//             for(var i=0;i<data.length;i++){
+//                 document.write(data[i].name)
+//             }
+//             //document.getElementById("para").innerHTML=data[1].email
+//             //console.log(data[1].company)//simply data will produce all json , data[0] as 1 id,data[0].name 
+//         }
+//         else{
+//             console.error(`Error: ${a.status}`)
+//         }
+//     }
+//     a.onerror = function(){
+//      console.error("error")
+//     }
+
+//     a.send();
+// }
+
+
+
+//-------------------------same  prgram using promises
+
+function fdata(){
+    const url='https://jsonplaceholder.typicode.com/users'
+    return fetch(url)
+    .then((response)=>{
+        if(!response.ok){
+            throw new Error("Network response was not ok");
+      }
+      return response.json();
+           
+        
+    })
+    .catch((error)=>{
+        console.error("error")
+    })
+}
+fdata()
+  .then((data) => {
+    console.log("fetched data" ,data[1]); // Process the fetched data here
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
+// Function to fetch data using promises------------------------------------------
+// function fetchDataFromServer(url) {
+//   return fetch(url)
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+//       return response.json();
+//     })
+//     .catch((error) => {
+//       console.error('Error fetching data:', error);
+//       throw error; // Rethrow the error to handle it outside of the function if needed
+//     });
+// }
+
+// // Usage
+// const url = 'https://jsonplaceholder.typicode.com/users';
+
+// fetchDataFromServer(url)
+//   .then((data) => {
+//     console.log('Data fetched successfully:', data);
+//     // Do something with the data
+//   })
+//   .catch((error) => {
+//     // Handle errors
+//     console.error('Error while fetching data:', error);
+//   });
+</script>
+</html>

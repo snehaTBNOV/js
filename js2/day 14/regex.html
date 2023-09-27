@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="demo"></p> 
+   <p id="demo1"></p> 
+   <p id="dem"></p>
+   <p id="de"></p>
+</body>
+<script>
+    // function regex(){
+    //     let a = "sneha is a good girl sneha"
+    //     let regex=/sneha/gi   //*sne it will start from sneha
+    //     //search ()search for a string9w3svhoool for the text visit w3school. ans=6) and return the position of 
+    //     //replace()
+        
+    //     let b =a.match(regex)
+    //     console.log("count is " + b.length)
+    // }
+
+    //regex()
+    //-----------------------------------------------------------------------------------
+
+    let text = "Is this all there is?";//"12345678", 
+        let result = text.match(/[h]/g); //[1-4],/(red|green)/g
+        document.getElementById("demo").innerHTML=result.length
+
+        let text1 = "Give 100%!"; 
+let result1 = text1.match(/\d/g);
+document.getElementById("demo1").innerHTML = result1;
+
+let tex = "HELLO, LOOK AT YOU!"; 
+let resul = tex.match(/\bLO/); //(/LO\b/);
+document.getElementById("dem").innerHTML = resul;
+
+let x = "Hellooo World! Hello W3Schools!"; 
+let y = x.match(/o+/g);//min 1 occ of 'o'
+// /lo*/g search for 'l' followed by zero or more occ of 'o'
+// /lo?/g search for 'l' followed by zero or on occ of 'o'
+document.getElementById("de").innerHTML = y;
+//so these brackets are used to find the range of characters 
+/* metacharcters 
+\d	Find a digit	
+\s	Find a whitespace character	
+\b	Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b	
+\uxxxx	Find the Unicode character specified by the hexadecimal number xxxx  //(/\u0057/g) hex of W
+*/
+function demo(){
+    let p="twinkle twinkle litle star"
+    let q=new RegExp("star","g")
+    let r="moon"
+    let s=p.replace(q,r)
+    console.log(s)
+}
+demo()
+</script>
+<!-- multiline matching 
+
+a=\n ht hioo \n ht jkuk
+
+b= /^ht/m-->
+</html>

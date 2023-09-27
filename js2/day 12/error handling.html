@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="demo">
+    <p>value b/w 5 and 10</p>
+    <button onclick="ab()">enter value</button>
+    <p id="para"></p>
+</body>
+<script>
+
+    function ab(){
+       const b= document.getElementById("para")
+       b.innerHTML=""
+       let x=document.getElementById("demo").value
+       try {
+        if(x.trim()==""){
+            throw "is empty"
+        }
+        if (isNaN(x)){
+            throw "not a number"
+        }
+        if (x>10){
+          throw "too high"
+        }
+        if (x<5){
+            throw "too low"
+        }
+       } catch (error) {
+         b.innerHTML="input"+error
+       }
+       finally{
+        document.getElementById("demo").value="";
+       }
+    }
+// try {
+//     consolelog("hi")
+// } catch (error) {
+//     alert("error")
+// }
+
+// var a=10
+// console.log(a)
+//if u type consolelog simply it wont throw anything.and the remaining o/p after this error wont visible .so try/catch acn produce o/p and it will pass the remaining code to run
+</script>
+</html>
+<!-- try catch
+try block has a code we wnat to run
+catch if any code tht should be handled(errors)
+finally-it will run the code anyhow
+throw: to design custom error -->
