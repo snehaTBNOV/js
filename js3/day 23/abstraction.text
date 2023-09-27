@@ -1,0 +1,29 @@
+to show only relevant info to the user not all the info
+
+inheritance 
+
+single : a-->b
+multilevel:a-->b-->c
+hybrid: a to b,c then d 
+hierarchial: a to b,c,d
+multiple:a,b-->c
+
+in js we hv prototype inheritance
+
+if u console let a=[6,7,8,9]
+a u can see arrays and prototypes,
+so arr.push(6)
+
+array.prottype 
+
+arr is the child of array to see tat
+arr.__proto__
+arr.__proto__.__proto__  object object is the ultimate parent.it doesn' hv any more parent
+functio is alsoan object
+
+
+let res=[
+    {id=1.incart=0},{id=2.incart=0},{id=3.incart=0}
+]
+
+localstorage.setitem(1,{allval,incart:incart+1})

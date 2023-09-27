@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="in" placeholder="enter ur msg" type="text">
+    <button id="btn">Click to save</button>
+    <div id="display"></div>
+
+    <script>
+          const inpu=document.getElementById('in')
+          const btn=document.getElementById('btn')
+          const disply=document.getElementById('display')
+
+
+          btn.addEventListener('click',()=>{
+            const msg=inpu.value;
+            if(msg.trim()!==""){
+                localStorage.setItem("message",msg)
+                disply.textContent=msg
+                inpu.value=""
+            }
+          })
+
+          const savedmsg=localStorage.getItem("message")
+          if(savedmsg){
+            disply.textContent=savedmsg
+          }
+
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="in" placeholder="enter ur msg" type="text">
+    <button id="btn">Click to save</button>
+    <div id="display"></div>
+
+    <script>
+          const inpu=document.getElementById('in')
+          const btn=document.getElementById('btn')
+          const disply=document.getElementById('display')
+
+
+          btn.addEventListener('click',()=>{
+            const msg=inpu.value;
+            if(msg.trim()!==""){
+                savedmsg.push(msg)
+                localStorage.setItem("message",JSON.stringify(savedmsg))
+                disply.innerHTML=savedmsg.join('<br>')
+                // disply.textContent=msg('\n')
+                inpu.value=""
+            }
+          })
+
+          const savedmsg=JSON.parse(localStorage.getItem("message"))||[]
+          if(savedmsg>0){
+            disply.innerHTML=savedmsg.join('<br>')
+          }
+
+    </script>
+</body>
+
+</html>
+
+<!-- text content and innerhtml
+
+u cannpt use  html tags like break if u use text content . need to use \n-->

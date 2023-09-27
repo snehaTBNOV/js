@@ -1,0 +1,51 @@
+#products{
+   display: flex;
+   flex-wrap: wrap; 
+   width: 100%;
+   margin: 0 auto;
+   justify-content: space-evenly;
+}
+
+.card{
+    width: 30%;
+    border: solid 1px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    margin:10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.3);
+    /* hori vert blur spread rgba */
+}
+
+.image{width: 100%;
+height:400px;}
+
+.image img{
+    width:90%;
+height:90%;
+padding: 20px;
+}
+
+#searchdiv{
+    text-align: center;
+    margin: 25px 0;
+
+}
+
+#search{
+    padding: 10px;
+    font-size: 18px;
+}
+
+.info{
+   padding: 20px;
+
+}
+#title{
+    font-weight: 600;
+    font-size: 18px;
+}
+#pri{
+    font-weight: 600;
+    color: brown;
+    font-size: 18px;
+}

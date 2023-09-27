@@ -1,0 +1,50 @@
+2 type of programming lang
+procedural and oops
+java is oops(nothing without class and obj)
+c is procedural (no class and object)
+js is both oops and procedural
+
+4 pillars:
+
+enacapsulation
+inheritance
+abstraction
+polymorphism
+
+encapsulation(tablet)-wrap diff med into a tube
+here also class has we hv 2 types methods and variables
+to avoid altering the data from class directly
+
+job of constructor is to provide default value to the class members
+
+class building{
+    //these are datamembers
+    tower;
+    parking;
+    price;
+    constructor(){
+    this.tower=1;
+    this.parking=1;
+    this.price=2000;
+    }
+    //member fun
+    increaseprice(){
+        this.price=3000
+    }
+    increasetower(){
+        this.tower=5;
+    }
+}
+
+//if u want to use the class creat object
+let apart=new building()
+console.log(apart.tower)//1
+apart.increaseprice()
+console.log(apart.price) //3000
+
+apart.price=5000
+console.log(apart.price)//here directly updated 5000
+so make the variable private and it shold be avialble only inside currentlass
+so who updated the default value:apart.increaseprice() this updated
+
+in js we can use # to make it private
